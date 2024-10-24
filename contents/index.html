@@ -34,12 +34,13 @@
             justify-content: center;
             margin: 20px auto;
             width: 100%;
-            max-width: 762px;
-            height: 584px;
-            background: #0202024a;
+            max-width: 800px;
+            height: 635px;
         }
         .device__wrap {
-            width: 380px;
+            width: 465px;
+            height: 635px;
+            background: url(../contents/assets/images/iphone_bg.png);
         }
         .user__wrap {
             max-width: 350px;
@@ -53,9 +54,14 @@
             margin-bottom: 10px;
         }
         .login__logo {
-            width: 200px;
-            height: 60px;
-            margin: 40px 0;
+            width: 181px;
+            margin: 0 auto;
+            height: 52px;
+            margin: 40px auto;
+            overflow: hidden;
+            background-position: 1px 0;
+            background: url(./assets/images/login_logo.png) 1px 0 no-repeat;
+            background-position: 1px 39%;
         }
         .login__input-container {
             margin-bottom: 6px;
@@ -164,7 +170,7 @@
                 <div class="user__wrap">
                     <form action="">
                         <div class="login__form">
-                            <div class="login__logo"><img src="" alt="인스타그램 로고" /></div>
+                            <div class="login__logo"></div>
                             <div class="login__input-container">
                                 <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일 " />
                                 <label for=""></label>
