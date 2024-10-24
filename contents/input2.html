@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .input-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .placeholder {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 16px;
+                color: #999;
+                transition: all 0.2s ease-in-out;
+                pointer-events: none; /* 클릭 불가능하게 설정 */
+            }
+
+            /* placeholder 축소 스타일 */
+            .input-filled .placeholder {
+                top: -10px;
+                left: 5px;
+                font-size: 12px;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="input-container" id="inputContainer">
+            <input type="text" id="inputField" />
+            <label class="placeholder" for="inputField">전화번호, 사용자 이름 또는 이메일</label>
+        </div>
+
+        <script>
+            const inputField = document.getElementById("inputField");
+            const inputContainer = document.getElementById("inputContainer");
+
+            // input 이벤트를 감지하여 처리
+            inputField.addEventListener("input", function () {
+                if (inputField.value !== "") {
+                    inputContainer.classList.add("input-filled"); // 입력되었을 때 class 추가
+                } else {
+                    inputContainer.classList.remove("input-filled"); // 입력이 없으면 class 제거
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <style>
+        :root {
+            --primary-button: rgb(0, 149, 246;);
+            --maincolor: rgb(0, 55, 107);
+            --border-box {
+                border: 1px solid #dbdbdb;
+            }
+        }
+
+        button {
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        .page__login {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .page__login-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 762px;
+            height: 584px;
+            background: #0202024a;
+        }
+        .device__wrap {
+            width: 380px;
+        }
+        .user__wrap {
+            max-width: 350px;
+            width: 100%;
+        }
+        .login__form {
+            border: 1px solid #dbdbdb;
+            padding: 0 40px;
+            /* max-width: 268px;
+                        width: 100%; */
+            margin-bottom: 10px;
+        }
+        .login__logo {
+            width: 200px;
+            height: 60px;
+            margin: 40px 0;
+        }
+        .login__input-container {
+            margin-bottom: 6px;
+        }
+        .login__input-container input {
+            border: 1px solid #dbdbdb;
+            height: 38px;
+            line-height: 38px;
+            width: 100%;
+            padding: 0 8px;
+        }
+        .login__input-container input:focus {
+            outline: none;
+            border: 1px solid #a8a8a8;
+        }
+        .login__input-container input::placeholder {
+            font-size: 12px;
+        }
+        .login__btn {
+            width: 100%;
+            height: 32px;
+            font-weight: bold;
+            color: #fff;
+            background: #4cb5f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .divider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .divider__text {
+            position: relative;
+            display: block;
+        }
+        .divider__line {
+            position: relative;
+            display: block;
+            width: 103px;
+            height: 1px;
+            background: #dbdbdb;
+        }
+        .user__wrap a {
+            display: inline-block;
+        }
+        .login__link-faceBook {
+            width: 100%;
+            display: inline-block;
+            color: #385185;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login__link-pw {
+            width: 100%;
+            display: inline-block;
+            color: var(--maincolor);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .sign-up__box {
+            padding: 20px 0;
+            border: 1px solid;
+            text-align: center;
+            border: 1px solid #dbdbdb;
+            margin-bottom: 10px;
+        }
+        .sign-up__text {
+            font-weight: bold;
+            color: rgb(0, 149, 246);
+        }
+        .app__link-wrap {
+        }
+        .app__link-text {
+            text-align: center;
+        }
+        .app__link {
+        }
+        .more-detail__wrap {
+            font-size: 12px;
+            line-height: 23px;
+            color: rgb(115, 115, 115);
+        }
+        .more-detail__top {
+            text-align: center;
+        }
+        .more-detail__link {
+            margin: 0 8px;
+        }
+        .more-detail__bottom {
+            margin: 12px 0;
+            text-align: center;
+        }
+        .more-detail__wrap select {
+            border: none;
+        }
+    </style>
+    <body>
+        <main class="page__login">
+            <article class="page__login-wrap">
+                <div class="device__wrap"></div>
+                <div class="user__wrap">
+                    <form action="">
+                        <div class="login__form">
+                            <div class="login__logo"><img src="" alt="인스타그램 로고" /></div>
+                            <div class="login__input-container">
+                                <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일 " />
+                                <label for=""></label>
+                            </div>
+                            <div class="login__input-container">
+                                <input type="text" placeholder="비밀번호" />
+                                <label for=""></label>
+                            </div>
+                            <button type="button" class="login__btn">로그인</button>
+                            <div class="divider__wrap"><span class="divider__line"></span><span class="divider__text">또는</span><span class="divider__line"></span></div>
+                            <a href="#" class="login__link-faceBook">FaceBook으로 로그인</a>
+                            <a href="#" class="login__link-pw">비밀번호를 잊으셨나요?</a>
+                        </div>
+                    </form>
+
+                    <div class="sign-up__box">계정이 없으신가요? <a href="#" class="sign-up__text">가입하기</a></div>
+
+                    <div class="app__link-wrap">
+                        <p class="app__link-text">앱을 다운로드하세요.</p>
+                        <a href="#" class="app__link"></a>
+                        <a href="#" class="app__link"></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="more-detail__wrap">
+                <div class="more-detail__top">
+                    <a class="more-detail__link" href="#">Meta</a>
+                    <a class="more-detail__link" href="#">소개</a>
+                    <a class="more-detail__link" href="#">블로그</a>
+                    <a class="more-detail__link" href="#">채용 정보</a>
+                    <a class="more-detail__link" href="#">도움말</a>
+                    <a class="more-detail__link" href="#">API</a>
+                    <a class="more-detail__link" href="#">개인정보처리방침</a>
+                    <a class="more-detail__link" href="#">약관</a>
+                    <a class="more-detail__link" href="#">위치</a>
+                    <a class="more-detail__link" href="#">Instagram Lite</a>
+                    <a class="more-detail__link" href="#">Threads</a>
+                    <a class="more-detail__link" href="#">연락처 업로드 & 비사용자</a>
+                    <a class="more-detail__link" href="#">Meta Verified</a>
+                </div>
+                <div class="more-detail__bottom">
+                    <select name="" id="">
+                        <option value="Afrikaans">Afrikaans</option>
+                        <option value="العربية">العربية</option>
+                        <option value="Čeština">Čeština</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Dansk">Dansk</option>
+                        <option value="English">English</option>
+                        <option value="English (UK)">English (UK)</option>
+                        <option value="Español (España)">Español (España)</option>
+                        <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                        <option value="Italiano">Italiano</option>
+                        <option value="日本語">日本語</option>
+                        <option value="한국어" selected>한국어</option>
+                        <option value="Bahasa Melayu">Bahasa Melayu</option>
+                        <option value="Norsk">Norsk</option>
+                    </select>
+                    <span class="copywriter"> © 2024 Instagram from Meta </span>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
