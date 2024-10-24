@@ -38,9 +38,110 @@
             height: 635px;
         }
         .device__wrap {
+            position: relative;
             width: 465px;
             height: 635px;
             background: url(../contents/assets/images/iphone_bg.png);
+        }
+        .device__photo-list {
+            position: absolute;
+            width: 250px;
+            height: 541px;
+            left: 158px;
+            top: 21px;
+            animation: fade-effect;
+            background-size: cover;
+            background-position: center;
+            animation: fadeInOut 12s infinite ease-in; /* 애니메이션 시간과 반복 */
+        }
+        /* fadeInOut 애니메이션 정의 */
+        /* @keyframes fadeInOut {
+            0% {
+                background-image: url("../contents/assets/images/screenshot1.png");
+                opacity: 1;
+            }
+            10% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 1;
+            }
+
+            25.01% {
+                background-image: url("../contents/assets/images/screenshot2.png");
+                opacity: 0;
+            }
+            35% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+
+            50.01% {
+                background-image: url("../contents/assets/images/screenshot3.png");
+                opacity: 0;
+            }
+            50.01% {
+                background-image: url("../contents/assets/images/screenshot3.png");
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+
+            75.01% {
+                background-image: url("../contents/assets/images/screenshot4.png");
+                opacity: 0;
+            }
+            85% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        } */
+        /* animation 영역 */
+        .device__photo-list {
+            position: absolute;
+            width: 250px;
+            height: 541px;
+            left: 158px;
+            top: 21px;
+            background-image: url(../contents/assets/images/screenshot2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            animation: mainGif 20s cubic-bezier(1, 0, 0.8, 1) infinite;
+            animation: mainGif 16s ease infinite;
+        }
+        @keyframes mainGif {
+            0% {
+                background-image: url(../contents/assets/images/screenshot1.png);
+            }
+            12.5% {
+                background-image: url(../contents/assets/images/screenshot2.png);
+            }
+            25% {
+                background-image: url(../contents/assets/images/screenshot3.png);
+            }
+            37.5% {
+                background-image: url(../contents/assets/images/screenshot4.png);
+            }
+            50% {
+                background-image: url(../contents/assets/images/screenshot1.png);
+            }
+            62.5% {
+                background-image: url(../contents/assets/images/screenshot2.png);
+            }
+            87.5% {
+                background-image: url(../contents/assets/images/screenshot3.png);
+            }
+            100% {
+                background-image: url(../contents/assets/images/screenshot4.png);
+            }
         }
         .user__wrap {
             max-width: 350px;
@@ -49,14 +150,12 @@
         .login__form {
             border: 1px solid #dbdbdb;
             padding: 0 40px;
-            /* max-width: 268px;
-                        width: 100%; */
             margin-bottom: 10px;
         }
         .login__logo {
             width: 181px;
             margin: 0 auto;
-            height: 52px;
+            height: 53px;
             margin: 40px auto;
             overflow: hidden;
             background-position: 1px 0;
@@ -64,28 +163,68 @@
             background-position: 1px 39%;
         }
         .login__input-container {
+            position: relative;
             margin-bottom: 6px;
         }
         .login__input-container input {
+            position: relative;
             border: 1px solid #dbdbdb;
             height: 38px;
             line-height: 38px;
             width: 100%;
-            padding: 0 8px;
+            font-size: 12px;
+            padding: 14px 8px 0;
+            caret-color: transparent;
         }
         .login__input-container input:focus {
             outline: none;
             border: 1px solid #a8a8a8;
         }
-        .login__input-container input::placeholder {
+        .login__placeholder {
+            position: absolute;
+            top: 12px;
+            left: 8px;
             font-size: 12px;
+            color: #a8a8a8;
+            pointer-events: none;
         }
+        .input-filled .login__placeholder {
+            top: 5px;
+            font-size: 10px;
+        }
+        .login__placeholder-btn {
+            display: none;
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            top: 9px;
+            right: 7px;
+            background: transparent;
+        }
+        .login__placeholder-btn:hover {
+            color: #909090;
+        }
+        /* input이 채워졌을 때 버튼 보이기 */
+        .input-filled .login__placeholder-btn {
+            display: block;
+        }
+        /* .login__input-container input::placeholder {
+         position: absolute;
+         top: 12px;
+         left: 10px;
+         font-size: 12px;
+     }
+     .login__input-container input::placeholder {
+         top: 5px;
+         font-size: 10px;
+     } */
         .login__btn {
             width: 100%;
             height: 32px;
             font-weight: bold;
             color: #fff;
             background: #4cb5f9;
+            /* background:rgb(0, 149, 246); */
             border-radius: 8px;
             margin-bottom: 10px;
         }
@@ -120,6 +259,7 @@
             text-align: center;
         }
         .login__link-pw {
+            font-size: 14px;
             width: 100%;
             display: inline-block;
             color: var(--maincolor);
@@ -145,6 +285,7 @@
         .app__link {
         }
         .more-detail__wrap {
+            width: 100%;
             font-size: 12px;
             line-height: 23px;
             color: rgb(115, 115, 115);
@@ -166,18 +307,21 @@
     <body>
         <main class="page__login">
             <article class="page__login-wrap">
-                <div class="device__wrap"></div>
+                <div class="device__wrap">
+                    <div class="device__photo-list"></div>
+                </div>
                 <div class="user__wrap">
                     <form action="">
                         <div class="login__form">
                             <div class="login__logo"></div>
-                            <div class="login__input-container">
-                                <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일 " />
-                                <label for=""></label>
+                            <div class="login__input-container" id="loginInpID">
+                                <input type="text" placeholder=" " id="loginID" />
+                                <label class="login__placeholder" for="loginID">전화번호, 사용자 이름 또는 이메일</label>
                             </div>
-                            <div class="login__input-container">
-                                <input type="text" placeholder="비밀번호" />
-                                <label for=""></label>
+                            <div class="login__input-container" id="loginInpPW">
+                                <input type="password" placeholder="" id="loginPW" />
+                                <label class="login__placeholder" for="loginPW">비밀번호</label>
+                                <button type="button" class="login__placeholder-btn">비밀번호 표시</button>
                             </div>
                             <button type="button" class="login__btn">로그인</button>
                             <div class="divider__wrap"><span class="divider__line"></span><span class="divider__text">또는</span><span class="divider__line"></span></div>
@@ -185,7 +329,6 @@
                             <a href="#" class="login__link-pw">비밀번호를 잊으셨나요?</a>
                         </div>
                     </form>
-
                     <div class="sign-up__box">계정이 없으신가요? <a href="#" class="sign-up__text">가입하기</a></div>
 
                     <div class="app__link-wrap">
@@ -233,5 +376,33 @@
                 </div>
             </article>
         </main>
+
+        <script>
+            const inputIdField = document.getElementById("loginID");
+            const inputPwField = document.getElementById("loginPW");
+            const inputIdContainer = document.getElementById("loginInpID");
+            const inputPwContainer = document.getElementById("loginInpPW");
+            const PWShowBtn = document.querySelector(".login__placeholder-btn");
+
+            loginInpID.addEventListener("input", function () {
+                if (inputIdField.value !== "") {
+                    inputIdContainer.classList.add("input-filled");
+                    console.log("아이디가 작성되고 있음");
+                } else {
+                    inputIdContainer.classList.remove("input-filled");
+                }
+            });
+
+            loginInpPW.addEventListener("input", function () {
+                if (inputPwField.value !== "") {
+                    inputPwContainer.classList.add("input-filled");
+                    console.log("비밀번호가 작성되고 있음");
+                    PWShowBtn.style.display = "block";
+                } else {
+                    inputPwContainer.classList.remove("input-filled");
+                    PWShowBtn.style.display = "none";
+                }
+            });
+        </script>
     </body>
 </html>
