@@ -7,7 +7,6 @@
         border: 1px solid #dbdbdb;
     }
 }
-
 button {
     outline: none;
     border: none;
@@ -28,7 +27,7 @@ button {
     margin: 20px auto;
     width: 100%;
     max-width: 800px;
-    height: 635px;
+    /* height: 635px; */
 }
 .device__wrap {
     position: relative;
@@ -92,8 +91,11 @@ button {
     width: 100%;
     margin-top: 10px;
 }
-.login__form {
+.user__wrap-inner {
     border: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+.login__form {
     padding: 0 40px;
     margin-bottom: 10px;
 }
@@ -131,7 +133,7 @@ button {
     top: 12px;
     left: 8px;
     font-size: 12px;
-    color: #a8a8a8;
+    color: #737373;
     pointer-events: none;
 }
 .input-filled .login__placeholder {
@@ -160,10 +162,17 @@ button {
     font-weight: bold;
     color: #fff;
     background: #4cb5f9;
-    /* background:rgb(0, 149, 246); */
     border-radius: 8px;
     margin-bottom: 8px;
     margin-top: 8px;
+    cursor: default;
+}
+.login__btn.button-active {
+    background: #0095f6;
+    cursor: pointer;
+}
+.login__btn.button-active:hover {
+    background: #1877f2;
 }
 .divider__wrap {
     display: flex;
@@ -253,9 +262,14 @@ button {
     line-height: 23px;
     margin-top: 32px;
     color: rgb(115, 115, 115);
+    padding: 0 16px;
 }
 .more-detail__top {
     text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .more-detail__link {
     margin: 0 8px;
@@ -266,4 +280,29 @@ button {
 }
 .more-detail__wrap select {
     border: none;
+}
+@media (max-width: 875px) {
+    .device__wrap {
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .user__wrap {
+        margin-top: 0;
+    }
+    .user__wrap-inner {
+        border: none;
+    }
+    .login__form {
+        border: transparent;
+        padding: 0 0;
+        margin-bottom: 10px;
+        margin: 0 40px 6px;
+    }
+    .sign-up__box {
+        border: transparent;
+    }
+    .login__logo {
+        margin-top: 0;
+    }
 }

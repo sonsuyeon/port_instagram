@@ -5,6 +5,7 @@ window.onload = function () {
     const inputPwField = document.getElementById("loginPW");
     const inputPwContainer = document.getElementById("loginInpPW");
     const PWShowBtn = document.querySelector(".login__placeholder-btn");
+    const loginSubmitBtn = document.getElementById("loginSubmitBtn");
 
     function handleInput(container, inputField, showButton) {
         if (inputField.value !== "") {
@@ -13,6 +14,27 @@ window.onload = function () {
         } else {
             container.classList.remove("input-filled");
             if (showButton) showButton.style.display = "none";
+        }
+    }
+
+    function handleInput(container, inputField, showButton) {
+        if (inputField.value !== "") {
+            container.classList.add("input-filled");
+            if (showButton) showButton.style.display = "block";
+        } else {
+            container.classList.remove("input-filled");
+            if (showButton) showButton.style.display = "none";
+        }
+        updateSubmitButtonState();
+    }
+
+    function updateSubmitButtonState() {
+        if (inputIdField.value !== "" && inputPwField.value.length >= 6) {
+            loginSubmitBtn.disabled = false;
+            loginSubmitBtn.classList.add("button-active");
+        } else {
+            loginSubmitBtn.disabled = true;
+            loginSubmitBtn.classList.remove("button-active");
         }
     }
 

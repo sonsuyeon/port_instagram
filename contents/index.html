@@ -15,24 +15,27 @@
                     <div class="device__photo-list"></div>
                 </div>
                 <div class="user__wrap">
-                    <form action="">
-                        <div class="login__form">
-                            <div class="login__logo"></div>
-                            <div class="login__input-container" id="loginInpID">
-                                <input type="text" placeholder=" " id="loginID" />
-                                <label class="login__placeholder" for="loginID">전화번호, 사용자 이름 또는 이메일</label>
+                    <div class="user__wrap-inner">
+                        <div class="login__logo"></div>
+                        <form action="">
+                            <div class="login__form">
+                                <div class="login__input-container" id="loginInpID">
+                                    <input type="text" placeholder=" " id="loginID" />
+                                    <label class="login__placeholder" for="loginID">전화번호, 사용자 이름 또는 이메일</label>
+                                </div>
+                                <div class="login__input-container" id="loginInpPW">
+                                    <input type="password" placeholder="" id="loginPW" />
+                                    <label class="login__placeholder" for="loginPW">비밀번호</label>
+                                    <button type="button" class="login__placeholder-btn">비밀번호 표시</button>
+                                </div>
+                                <button type="button" id="loginSubmitBtn" class="login__btn">로그인</button>
+                                <div class="divider__wrap"><span class="divider__line"></span><span class="divider__text">또는</span><span class="divider__line"></span></div>
+                                <button type="button" class="login__btn-faceBook"><span class="login__ico-facebook"></span><span class="login__btn-text">FaceBook으로 로그인</span></button>
+                                <a href="#" class="login__link-pw">비밀번호를 잊으셨나요?</a>
                             </div>
-                            <div class="login__input-container" id="loginInpPW">
-                                <input type="password" placeholder="" id="loginPW" />
-                                <label class="login__placeholder" for="loginPW">비밀번호</label>
-                                <button type="button" class="login__placeholder-btn">비밀번호 표시</button>
-                            </div>
-                            <button type="button" class="login__btn">로그인</button>
-                            <div class="divider__wrap"><span class="divider__line"></span><span class="divider__text">또는</span><span class="divider__line"></span></div>
-                            <button type="button" class="login__btn-faceBook"><span class="login__ico-facebook"></span><span class="login__btn-text">FaceBook으로 로그인</span></button>
-                            <a href="#" class="login__link-pw">비밀번호를 잊으셨나요?</a>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+
                     <div class="sign-up__box">계정이 없으신가요? <a href="#" class="sign-up__text">가입하기</a></div>
 
                     <div class="app__link-wrap">
