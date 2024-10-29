@@ -3,6 +3,7 @@
 :root {
     --primary-button: rgb(0, 149, 246;);
     --maincolor: rgb(0, 55, 107);
+    --primary-color: rgb(0, 0, 0);
     --border-box {
         border: 1px solid #dbdbdb;
     }
