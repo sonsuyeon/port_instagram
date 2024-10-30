@@ -25,11 +25,15 @@
     display: none;
 }
 .page__main {
+    width: 100%;
     display: flex;
 }
 .main__contents {
     max-width: 630px;
     padding: 20px;
+}
+.main__contents-wrap {
+    display: flex;
 }
 
 .more__link-list {
@@ -50,10 +54,9 @@
     display: flex;
     flex-direction: column;
     max-width: 335px;
+    width: 100%;
     box-sizing: border-box;
-    border: 1px solid #dbdbdb;
-    border-left: none;
-    border-bottom: none;
+    border-right: 1px solid #dbdbdb;
     height: 100%;
     height: 100vh;
     padding: 8px 12px 20px;
@@ -65,10 +68,8 @@ a svg:hover {
     fill: red;
 }
 a svg {
-    /* background: var(--primary-color); */
 }
 a svg:hover {
-    /* background: red; */
 }
 .user__profile {
     display: inline-block;
@@ -81,7 +82,120 @@ a svg:hover {
     border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
     border-image-slice: 1;
 }
-
+.story__list {
+    display: flex;
+    margin-bottom: 24px;
+}
+.story__item {
+    max-width: 64px;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+.story__wrap {
+    text-align: center;
+}
+.story__user-profile {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #dbdbdb;
+}
+.story__user-name {
+    font-size: 12px;
+    display: inline-block;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*recommand 영역*/
+.my-account__wrap {
+}
+.my-account__user-name {
+}
+.recommand__user-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    line-height: 20px;
+    padding: 0 16px;
+}
+.recommand__user-tle {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(115, 115, 115);
+}
+.recommand__user-link--all {
+    font-size: 14px;
+    font-weight: bold;
+}
+.my-account__btn-change {
+    font-weight: bold;
+    color: #0095f6;
+}
+.recommand {
+    padding-top: 20px;
+    margin-left: 64px;
+    height: 100vh;
+    width: 338px;
+}
+.recommand__user__container {
+    margin-top: 24px;
+}
+.recommand__user-list {
+    padding: 8px 0;
+}
+.recommand__user-item {
+    display: flex;
+    padding: 8px 16px;
+}
+.recommand__user-link {
+}
+.recommand__user-profile {
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+.recommand__user-wrap {
+    width: 175px;
+    max-width: 175px;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+.recommand__user-text {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.recommand__user-btn {
+    font-weight: bold;
+    color: #0095f6;
+}
+.recommand__user-btn:hover {
+    color: #222;
+}
+.main-footer {
+    font-size: 12px;
+    margin-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgb(119, 119, 119);
+}
+.main-footer__top {
+    margin-bottom: 16px;
+    word-break: keep-all;
+}
+.main-footer__link {
+}
+.main-footer .copywrite {
+    font-size: 12px;
+}
 @media (max-width: 1264px) {
     .sideBar {
         max-width: 72px;
@@ -109,73 +223,4 @@ a svg:hover {
     .logo__wrap .mobile {
         display: block;
     }
-}
-.story__list {
-    display: flex;
-}
-.story__item {
-    max-width: 64px;
-    margin-right: 12px;
-    white-space: nowrap;
-}
-.story__wrap {
-}
-.story__user-profile {
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #dbdbdb;
-}
-.story__user-name {
-    font-size: 12px;
-    display: inline-block;
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.recommand {
-    padding-left: 64px;
-    height: 100vh;
-}
-
-.recommand__user__container {
-}
-
-.recommand__user-list {
-}
-.recommand__user-item {
-    display: flex;
-    margin-bottom: 10px;
-}
-.recommand__user-link {
-}
-.recommand__user-profile {
-    display: block;
-    width: 46px;
-    height: 46px;
-    background: #dbdbdb;
-    border-radius: 50%;
-    margin-right: 14px;
-}
-.recommand__user-wrap {
-    width: 175px;
-    max-width: 175px;
-    margin-right: 12px;
-    white-space: nowrap;
-}
-.recommand__user-text {
-    font-size: 12px;
-    display: block;
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.recommand__user-btn {
-}
-.main-footer {
-}
-.main-footer__top {
-}
-.main-footer__link {
 }
