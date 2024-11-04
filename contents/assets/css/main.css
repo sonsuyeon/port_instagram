@@ -27,6 +27,7 @@
 .page__main {
     width: 100%;
     display: flex;
+    overflow: hidden;
 }
 .main__contents {
     max-width: 630px;
@@ -35,7 +36,6 @@
 .main__contents-wrap {
     display: flex;
 }
-
 .more__link-list {
 }
 .more__link-item {
@@ -100,6 +100,8 @@ a svg:hover {
     height: 60px;
     border-radius: 50%;
     background: #dbdbdb;
+    background-size: 100% 100%;
+    background-image: url(../images/user_default.jpg);
 }
 .story__user-name {
     font-size: 12px;
@@ -108,8 +110,131 @@ a svg:hover {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+/*peed 영역 */
+.peed-wrap__container {
+}
+.peed-wrap {
+    padding: 6px;
+    margin-bottom: 16px;
+}
+.peed-user__wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.peed-user__profile {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-right: 11px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    background-image: url(../images/user_default.jpg);
+    background-size: 100% 100%;
+}
+.peed-user__inner {
+    margin-right: auto;
+}
+.peed-user__id {
+    font-size: 14px;
+    font-weight: 700;
+}
+.peed-user__update {
+    font-size: 14px;
+    color: #737373;
+}
+.peed-user__update::before {
+    display: inline-block;
+    content: "·";
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.peed-user__info {
+    font-size: 12px;
+}
+.peed-user__btn--favorite {
+    padding: 4px;
+    cursor: pointer;
+}
+.peed-user__btn--more {
+}
+.peed-photo__wrap {
+    width: 468px;
+    margin-bottom: 14px;
+}
+.peed-photo__wrap img {
+    width: 100%;
+}
+.peed-reaction__wrap {
+    margin-bottom: 14px;
+    height: 24px;
+}
+.peed-reaction__inner {
+}
+.peed-reaction__item {
+    margin-right: 18px;
+}
+.peed-reaction__item:last-child {
+    margin-right: initial;
+}
+.peed-reaction__item.reaction--bookmark {
+    margin-left: auto;
+}
+.peed-reaction__number--txt {
+}
+.peed-reaction__number {
+}
+.peed-content__wrap {
+}
+.peed-content__id {
+}
+.peed-content__text {
+    display: inline-block;
+}
+.peed-like__wrap {
+    font-size: 14px;
+    font-weight: 700;
+}
+.peed-like__id {
+}
+.peed-like__text {
+}
+.peed-comment__wrap {
+}
+.peed-comment__link--more {
+}
+.peed-comment__box {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.peed-comment__box textarea {
+    width: 90%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    overflow: hidden; /* 스크롤바 숨김 */
+    resize: none; /* 사용자가 수동으로 크기 조절하지 못하게 함 */
+}
 /*recommand 영역*/
 .my-account__wrap {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+.my-account__link {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+.my-account__user-profile {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    margin-right: 11px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    background-image: url(../images/user_default.jpg);
+    background-size: 100% 100%;
 }
 .my-account__user-name {
 }
@@ -132,6 +257,7 @@ a svg:hover {
 }
 .my-account__btn-change {
     font-weight: bold;
+    margin-left: auto;
     color: #0095f6;
 }
 .recommand {
@@ -206,21 +332,29 @@ a svg:hover {
     .more__link svg {
         margin: 0;
     }
-}
-@media (max-width: 1264px) {
-    .sideBar {
-        max-width: 72px;
-    }
-    .more__link-text {
-        display: none;
-    }
-    .more__link svg {
-        margin: 0;
-    }
     .logo__wrap svg {
         display: none;
     }
     .logo__wrap .mobile {
         display: block;
+    }
+}
+@media (max-width: 1159px) {
+    .recommand {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .page__main {
+        flex-direction: column;
+    }
+    .sideBar {
+        max-width: 100%;
+        flex-direction: row;
+        height: auto;
+    }
+    .more__link-list {
+        display: flex;
     }
 }
